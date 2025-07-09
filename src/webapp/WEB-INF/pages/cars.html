@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Car List</title>
+  <style>
+    table { border-collapse: collapse; width: 80%; margin: 20px auto; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+<h2 style="text-align: center">Car List</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Color</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:if="${cars == null or cars.empty}">
+    <td colspan="3">No cars found!</td>
+  </tr>
+  <tr th:each="car : ${cars}">
+    <td th:text="${car.model}">Default Model</td>
+    <td th:text="${car.year}">2020</td>
+    <td th:text="${car.color}">Black</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
