@@ -14,7 +14,7 @@
 <table>
   <thead>
   <tr>
-    <th>Model</th>
+    <th>web.model</th>
     <th>Year</th>
     <th>Color</th>
   </tr>
@@ -24,7 +24,7 @@
     <td colspan="3">No cars found!</td>
   </tr>
   <tr th:each="car : ${cars}">
-    <td th:text="${car.model}">Default Model</td>
+    <td th:text="${car.model}">Default web.model</td>
     <td th:text="${car.year}">2020</td>
     <td th:text="${car.color}">Black</td>
   </tr>

@@ -1,9 +1,9 @@
-package web.config;
+package web.model;
 
 public class Car {
-    private String model;
-    private int year;
-    private String color;
+    private final String model;
+    private final int year;
+    private final String color;
 
     public Car(String model, int year, String color) {
         this.model = model;
