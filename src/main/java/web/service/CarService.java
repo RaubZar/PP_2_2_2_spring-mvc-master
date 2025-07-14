@@ -8,19 +8,8 @@ import web.model.Car;
 import java.util.List;
 
 @Service
-public class CarService {
-    private final CarDao carDao;
+public interface CarService {
+    public List<Car> getAllCars();
 
-    @Autowired
-    public CarService(CarDao carDao) {
-        this.carDao = carDao;
-    }
-
-    public List<Car> getAllCars() {
-        return carDao.getAllCars();
-    }
-
-    public List<Car> getLimitedCars(int count) {
-        return carDao.getCars(count);
-    }
+    public List<Car> getLimitedCars(int count);
 }
